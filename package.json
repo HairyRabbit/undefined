@@ -36,7 +36,7 @@
     "request": "^2.72.0",
     "toml": "^2.3.0",
     "toml-loader": "^1.0.0",
-    "webpack": "^1.13.1",
+    "webpack": "^2.1.0-beta.14",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
   },
