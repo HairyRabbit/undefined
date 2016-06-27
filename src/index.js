@@ -1,3 +1,5 @@
 //import test from 'dll/test'
 
-console.log(3)
+import test from './../lib/dll/test'
+
+console.log(test)

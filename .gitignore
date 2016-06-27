@@ -42,3 +42,5 @@ dist
 .publish
 test
 .test
+.lib
+.happypack
