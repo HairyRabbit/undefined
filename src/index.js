@@ -1,3 +1,4 @@
 import React from 'react'
+import test from 'dll/test'
 
-console.log(React)
+console.log(React, test)
