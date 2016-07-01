@@ -1,10 +1,12 @@
+
 import React from 'react'
+import $ from 'jquery'
 import test from 'dll/test'
 import 'test2.js'
 
 import Elm from './Main.elm'
 
-console.log(React, test, Elm)
+console.log($, React, test, Elm)
 
 const elm = Elm.Main.fullscreen()
 

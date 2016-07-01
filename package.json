@@ -43,8 +43,8 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
+      "test1": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S"
   },
   "repository": {
     "type": "git",
