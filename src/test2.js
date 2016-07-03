@@ -1,4 +1,4 @@
-console.log(1)
+console.log(3)
 
 if(module.hot) {
     module.hot.accept()

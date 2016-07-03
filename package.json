@@ -28,10 +28,11 @@
     "express": "^4.14.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-cli": "^1.2.1",
+    "gulp-data": "^1.2.1",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-stylus": "^2.5.0",
     "gulp-util": "^3.0.7",
-    "happypack": "^2.1.1",
+    "happypack": "github:amireh/happypack",
     "minimatch": "^3.0.2",
     "morgan": "^1.7.0",
     "nunjucks-loader": "^2.4.3",
@@ -43,8 +44,8 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
-      "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
-      "test1": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S"
+    "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
+    "test1": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S"
   },
   "repository": {
     "type": "git",
