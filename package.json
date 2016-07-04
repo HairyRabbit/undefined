@@ -1,6 +1,6 @@
 {
   "name": "atlantis",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -50,8 +50,8 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "scripts": {
-    "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
-    "test1": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S"
+    "test1": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
+    "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S"
   },
   "repository": {
     "type": "git",
