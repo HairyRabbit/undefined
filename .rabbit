@@ -2,3 +2,25 @@
 
 [server]
 port = 8888
+
+[environment]
+src = "src"
+lib = "lib"
+components = "lib/components"
+images = "src/images"
+fonts = "src/images"
+tmp = ".tmp"
+dll = ".tmp"
+
+[ignores]
+private = "_"
+tmp = "\\.#"
+backup = "~"
+
+[extname]
+css = "styl"
+html = "html"
+js = "js"
+
+[buildList]
+strategy = "default"
