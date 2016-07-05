@@ -1,4 +1,7 @@
-# Config
+# -*- mode: toml -*-
+#
+# Rabbit project configs.
+#
 
 [server]
 port = 8888
@@ -14,7 +17,7 @@ dll = ".tmp"
 
 [ignores]
 private = "_"
-tmp = "\\.#"
+tmp = ".#"
 backup = "~"
 
 [extname]

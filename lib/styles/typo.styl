@@ -1,0 +1,56 @@
+
+html
+  fz 100%
+
+body
+  lh 1.4
+
+
+ff = Arial, Helvetica, sans-serif
+
+// Font size generator
+// 
+// http://www.modularscale.com/?1.1&em&1.25&web&text
+fz-ratio  = 1.25
+fz-base   = 1.1rem
+fz-prefix = "fz"
+
+fz-calc(base, ratio)
+  base + base * ratio
+
+fz-c1 = fz-calc(fz-base, 1 - fz-ratio)
+fz-c2 = fz-base
+fz-c3 = fz-calc(fz-c2, fz-ratio - 1)
+fz-c4 = fz-calc(fz-c3, fz-ratio - 1)
+fz-c5 = fz-calc(fz-c4, fz-ratio - 1)
+fz-c6 = fz-calc(fz-c5, fz-ratio - 1)
+
+fz-list = {
+  s:    fz-c1,
+  m:    fz-c2,
+  l:    fz-c3,
+  xl:   fz-c4,
+  xxl:  fz-c5,
+  xxxl: fz-c6
+}
+
+for k, v in fz-list
+  ${fz-prefix}-{k}
+    fz v
+
+p
+h6
+h5
+ @extend $fz-m
+h4
+ @extend $fz-l
+h3
+ @extend $fz-xl
+h2
+ @extend $fz-xxl
+h1
+ @extend $fz-xxxl
+
+for n, i in (1...6)
+  h{i}
+    fw bold

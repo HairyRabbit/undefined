@@ -3,6 +3,8 @@ import $ from 'jquery'
 import test from 'dll/test'
 import 'test2.js'
 
+console.log(5)
+
 //import Elm from './Main.elm'
 
 //console.log($, React, test, Elm)

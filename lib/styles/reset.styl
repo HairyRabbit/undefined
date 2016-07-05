@@ -1,4 +1,4 @@
-reset-box()
+reset-space()
   pa 0
   ma 0
   bd 0
@@ -24,5 +24,9 @@ reset-body(ff, fz, c, bgc)
   ovx h
   ovy a
 
-
-
+reset-box()
+  html
+    box bdbox
+  *, *:before, *:after
+    box ext
+  
