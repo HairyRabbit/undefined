@@ -7,3 +7,7 @@ if(module.hot) {
         console.log(2222)
     })
 }
+
+console.log(
+    [{ a: 1 }, { b: 2 }].reduce(::Object.assign, {})
+)
