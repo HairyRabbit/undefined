@@ -49,3 +49,9 @@ test
 .lib
 .happypack
 .dll
+
+
+# Project
+src/zhihu
+src/emusic
+src/Application
