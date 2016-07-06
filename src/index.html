@@ -1,3 +1,5 @@
+{% import "tpls/macros.html" as $ %}
+
 {% block content %}
 <main id="main">
   <section id="baseline">
@@ -205,15 +207,17 @@
 
 
 {% block styles %}
-<link rel="stylesheet" href="index.css">
+{{ $.css("index") }}
 {% endblock %}
 
+
 {% block scripts %}
-<script src="vendor.dll.js"></script>
-<script src="tool.dll.js"></script>
-<script src="commons.js"></script>
-<script src="index.js"></script>
-{% endblock%}
+{{ $.js("vendor.dll") }}
+{{ $.js("tool.dll") }}
+{{ $.js("commons") }}
+{{ $.js("index") }}
+{% endblock %}
 
 
 {% extends "tpls/page.html" %}
+
