@@ -1,0 +1,7 @@
+{% macro js(src, async=false) %}
+<script src="{{src}}.js" {{"async" if async}}></script>
+{% endmacro %}
+
+{% macro css(src) %}
+<link rel="stylesheet" href="{{src}}.css">
+{% endmacro %}
