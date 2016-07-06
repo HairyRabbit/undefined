@@ -1,0 +1,16 @@
+#!/bin/sh
+#-*- mode: shell -*-
+basedir=`dirname "$0"`
+
+case `uname` in
+    *CYGWIN*) basedir=`cygpath -w "$basedir"`;;
+esac
+
+if [ -x "$basedir/node" ]; then
+  "$basedir/node -r babel-register"  "$basedir/../lib/scaffold/rabbit" "$@"
+  ret=$?
+else 
+  node -r babel-register "$basedir/../lib/scaffold/rabbit" "$@"
+  ret=$?
+fi
+exit $ret
