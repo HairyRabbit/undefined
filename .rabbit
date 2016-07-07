@@ -9,7 +9,7 @@ port = 8888
 [environment]
 src = "src"
 lib = "lib"
-components = "lib/components"
+components = "src/components"
 images = "src/images"
 fonts = "src/images"
 tmp = ".tmp"

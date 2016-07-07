@@ -1,15 +1,82 @@
 @require "styles/reset"
 @require "styles/typo"
+@require "styles/space"
 
 /*
  * test.
  */
-body
-  reset-box()
-  reset-font()
-  reset-theme()
-  //reset-body()
-  c red #f3f3f3
-  size 1rem 2rem
-  //pl 1rem
+
+reset-box()
+reset-a()
+
   
+html
+body
+  size 100%
+
+body
+  reset-space()  
+
+.gg
+  size 100%
+  pos abso
+  pointer-events none
+  &-container
+    size 100%
+    pos rela
+
+.avatar
+  dis ib
+  size 3rem
+  &__img
+    w 100%
+    h a
+    bdra 50%
+    
+
+side-person-w = 6rem
+side-menu-w   = 12rem
+
+.side-person
+  fill(l, true)
+  bg #1d2531
+  w side-person-w
+  
+  
+.side-menu
+  fill(y, true)
+  bg #222c3c
+  l side-person-w
+  w side-menu-w
+  py 2rem
+
+
+.person
+  reset-list()
+  ta cen
+
+.person-item
+  py 2rem
+  .avatar
+    opacity 0.56
+  
+
+.menu
+  reset-list()
+  
+.menu-title
+  cc #8c94a0
+  mb 1rem
+  fw bold
+  fz 0.6rem
+  pl 2rem
+
+.menu-item
+  cc #eee
+  pl 2rem
+  py 0.6rem
+  w 100%
+  fz 0.8rem
+
+  &.active
+    bg #313d4f

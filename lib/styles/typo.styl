@@ -1,11 +1,4 @@
 
-html
-  fz 100%
-
-body
-  lh 1.4
-
-
 ff = Arial, Helvetica, sans-serif
 
 // Font size generator
@@ -38,6 +31,15 @@ for k, v in fz-list
   ${fz-prefix}-{k}
     fz v
 
+html
+  fz 100%
+
+body
+  lh 1.4
+  ff ff
+  fz 14px
+
+/*
 p
 h6
 h5
@@ -54,3 +56,5 @@ h1
 for n, i in (1...6)
   h{i}
     fw bold
+
+*/
