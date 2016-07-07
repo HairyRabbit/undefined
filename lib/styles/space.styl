@@ -1,0 +1,45 @@
+fill-x()
+  l 0
+  r 0
+
+fill-y()
+  t 0
+  b 0      
+
+fill(dir = a, fixed = false)
+  if fixed
+    pos abso
+  else
+    pos fixed
+
+  if dir is x
+    fill-x()
+  else if dir is y
+    fill-y()
+  else if dir is t
+    t 0
+    fill-x()
+  else if dir is b
+    b 0
+    fill-x()
+  else if dir is l
+    l 0
+    fill-y()
+  else if dir is r
+    r 0
+    fill-y()
+  else if dir is tl
+    t 0
+    l 0
+  else if dir is tr
+    t 0
+    r 0
+  else if dir is bl
+    b 0
+    l 0
+  else if dir is br
+    b 0
+    r 0
+  else
+    fill-x()
+    fill-y()

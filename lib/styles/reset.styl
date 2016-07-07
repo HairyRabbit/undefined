@@ -15,7 +15,6 @@ reset-font()
 reset-theme()
   bgc a0
   cc ext
-  bd 0
 
 reset-body(ff, fz, c, bgc)
   ff ff
@@ -30,4 +29,18 @@ reset-box()
     box bdbox
   *, *:before, *:after
     box ext
-  
+
+reset-list()
+  lity no
+
+  &
+  & > li
+    reset-space()
+
+
+reset-a()
+  a
+    dis ib
+    cc ext
+    td none
+    
