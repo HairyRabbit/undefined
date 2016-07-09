@@ -2,32 +2,62 @@
 
 那么首先，什么是专用的？
 
-专用的就是说只有兔可以用，其他人都不可以
+专用的就是说只有兔可以用，其他人都不可以。
 
-首先，用`git`将这个项目克隆到本地
+好的，下面还是来说打包的事情，这会分别谈及5个方面的打包过程，他们分别是：
 
-```sh
-git clone https://github.com/yuffiy/atlantis.git
+- JS
+- CSS
+- HTML
+- Image
+- Font
+
+是的，没看错也没在开玩笑，目的也就是为了增强打包的能力。因为兔的职业就是4号位高阶前端附加能力大祭祀。
+
+## Happypack loader 辅助 webpack2 急速 rebuild
+
+是什么让webpack打包如此的慢？
+
+除了常规的优化策略，这里用到了`Happypack`。`Happypack`的目的是为了让打包任务多线程并列运行。如果将缓存开到最大，打包速度就是飞起。在前置缓存之后打包速度的提升更是非常明显的。
+
+`Happypack`的配置使用很简单，只需要将普通的`webpack loader`改为`happypack loader`就好：
+
+```js
+{
+  test: /\.jsx?$/,
+  loader: 'happypack/loader?id=js'
+}
+
+new HappyPack({
+  id: 'js',
+  threads: 2,
+  loaders: ['babel?cacheDirectory=true'],
+  verbose: false
+})
 ```
 
-运行下面的命令
+`Happypack`有线程池，多个loader时可以用这个来代替设置`threads`：
 
-```sh
-npm i
-npm start
+```js
+const pool = HappyPack.ThreadPool({ size: 6 })
+
+new HappyPack({
+  id: 'js',
+  threadPool: pool,
+  loaders: ['babel?cacheDirectory=true'],
+  verbose: false
+})
 ```
 
-Browser会自动打开`localhost:8888`
+下面我们就来比较一下速度提升，首先是没有用到`Happypack`时的build和rebuild情况：
 
-**Elm player** 需要有`elm 0.17`，并且在start之前安装项目所需的依赖
+接下来是使用了Happypack，可以看到前边在启动`Happypack`时要稍微废些时间，但是build和rebuild的时间都有显著减少。
 
-```sh
-elm package install -y
-```
+再让我们来试试有缓存之后的打包速度：
 
-## Happypack + dll 协助 webpack2 急速 rebuild
 
-除了常规的优化策略，这里还用到了`Happypack`，Happypack的目的是为了让打包任务多线程并列执行，并且将缓存最大化。在前置缓存之后打包速度的提升是非常明显的。
+
+## dll 的打包策略
 
 前置`dll`的目的同样也是为了增速。
 
@@ -51,3 +81,29 @@ elm package install -y
 ## 工具自动重启
 
 监听builder文件夹，发生变化后会自动重启兔builder
+
+
+## 什么，你也想试试？
+
+哼，我是不会告诉你要怎么跑起来的。
+
+首先，用`git`将这个项目克隆到本地：
+
+```sh
+git clone https://github.com/yuffiy/atlantis.git
+```
+
+运行下面的命令：
+
+```sh
+npm i
+npm start
+```
+
+Browser会自动打开`localhost:8888`
+
+**Elm player** 需要有`elm 0.17`，并且在start之前安装项目所需的依赖
+
+```sh
+elm package install -y
+```
