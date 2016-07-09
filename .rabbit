@@ -1,19 +1,15 @@
-# -*- mode: toml -*-
-#
-# Rabbit project configs.
-#
-
 [server]
-port = 8888
+port = 8888.0
+open = false
 
 [environment]
 src = "src"
 lib = "lib"
-components = "src/components"
-images = "src/images"
-fonts = "src/images"
 tmp = ".tmp"
 dll = ".tmp"
+components = "src/components"
+images = "src/images"
+fonts = "src/fonts"
 
 [ignores]
 private = "_"
@@ -27,3 +23,7 @@ js = "js"
 
 [buildList]
 strategy = "default"
+
+[dll]
+blackList = ["testhahaha8"]
+failbackStrategy = "ignore"

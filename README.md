@@ -1,4 +1,4 @@
-# Rabbit 专用不科学实验性超级智能打包工具
+# Rabbit 专用不科学实验性超级智能超绝Super超wonderful超excellent打包工具
 
 那么首先，什么是专用的？
 
@@ -17,7 +17,7 @@ npm i
 npm start
 ```
 
-Browser会自动打开 `localhost:8888`
+Browser会自动打开`localhost:8888`
 
 **Elm player** 需要有`elm 0.17`，并且在start之前安装项目所需的依赖
 

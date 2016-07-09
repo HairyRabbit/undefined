@@ -1,11 +1,11 @@
 {
   "name": "rabbit-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "dependencies": {
     "immutable": "^3.8.1",
-    "jquery": "^3.0.0",
+    "jquery": "^3.1.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-elm-components": "^1.0.0"
@@ -48,6 +48,7 @@
     "request": "^2.72.0",
     "toml": "^2.3.0",
     "toml-loader": "^1.0.0",
+    "tomlify-j0.4": "^1.0.1",
     "webpack": "^2.1.0-beta.14",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
