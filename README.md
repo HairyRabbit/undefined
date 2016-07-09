@@ -1,10 +1,8 @@
-# Rabbit 专用不科学实验性超级只能打包工具
+# Rabbit 专用不科学实验性超级智能打包工具
 
 那么首先，什么是专用的？
 
 专用的就是说只有兔可以用，其他人都不可以
-
-## 开始
 
 首先，用`git`将这个项目克隆到本地
 
@@ -39,8 +37,10 @@ elm package install -y
 
 但这里有个问题，有些依赖并不能直接打包，比如`monaco-editor`，这样打包会报错。解决办法有两个：
 
-1. 安装这些依赖时不要使用`-S`，使用-D是可以的，比如`npm i -D monaco-editor`，这样依赖会安装到`devDependencies`而不是`dependencies`
-2. 将依赖的名称加入到dll的黑名单中，如此打包会自动忽略同名的依赖，当然这个需要写在`.rabbit`中
+1. 安装这些依赖时不要使用`-S`，使用`-D`是可以的，比如`npm i -D monaco-editor`，这样依赖会安装到`devDependencies`而不是`dependencies`
+2. 将依赖的名称加入到`dll`的黑名单中，如此打包会自动忽略同名的依赖，当然这个需要写在`.rabbit`中
+
+当然，报错了也不要紧，兔builder 会将报错的家伙扔到黑名单中，然后放弃打包或是重新打包。
 
 ## 用 webpack 来打包 elm app
 
