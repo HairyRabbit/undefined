@@ -25,5 +25,5 @@ js = "js"
 strategy = "default"
 
 [dll]
-blackList = ["testhahaha8"]
+blackList = ["testaaaa"]
 failbackStrategy = "ignore"
