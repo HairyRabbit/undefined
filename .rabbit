@@ -2,6 +2,7 @@
 port = 8888.0
 open = false
 
+
 [environment]
 src = "src"
 lib = "lib"
@@ -10,6 +11,7 @@ dll = ".tmp"
 components = "src/components"
 images = "src/images"
 fonts = "src/fonts"
+takerSuffix = "-lib"
 
 [ignores]
 private = "_"
@@ -22,7 +24,10 @@ html = "html"
 js = "js"
 
 [buildList]
-strategy = "default"
+strategy = "timeout"
+tick     = 2000
+timeout  = 5000
+keepone  = true
 
 [dll]
 blackList = ["testaaaa"]
