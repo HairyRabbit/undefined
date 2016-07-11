@@ -41,6 +41,7 @@
     "gulp-stylus": "^2.5.0",
     "gulp-util": "^3.0.7",
     "happypack": "github:amireh/happypack",
+    "inquirer": "^1.1.2",
     "minimatch": "^3.0.2",
     "morgan": "^1.7.0",
     "nunjucks-loader": "^2.4.3",

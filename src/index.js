@@ -118,7 +118,7 @@ var m1 = test.match(/\$\{(\d+)\:(\w+)\}/g)
     )
 
 var m2 = [].concat([].map.call("Class", (m, i, l) => l.substr(0, i + 1)), m1)
-console.log(m2)
+//console.log(m2)
 
 let offset = 0
 var timer = setInterval(_ => {
@@ -126,7 +126,7 @@ var timer = setInterval(_ => {
         clearInterval(timer)
         return
     }
-    console.log(m2[offset])
+    //console.log(m2[offset])
     $('pre').html(m2[offset])
     offset = offset + 1
 }, 300)
