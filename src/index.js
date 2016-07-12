@@ -4,6 +4,7 @@ import $ from 'jquery'
 import { render } from 'react-dom'
 import Snippets from 'Snippets/Main.elm'
 
+
 render(
     <Elm src={Snippets.Main} />,
     document.getElementById('main')
@@ -121,6 +122,7 @@ var m2 = [].concat([].map.call("Class", (m, i, l) => l.substr(0, i + 1)), m1)
 //console.log(m2)
 
 let offset = 0
+/*
 var timer = setInterval(_ => {
     if(offset >= m2.length) {
         clearInterval(timer)
@@ -130,7 +132,7 @@ var timer = setInterval(_ => {
     $('pre').html(m2[offset])
     offset = offset + 1
 }, 300)
-
+*/
 //var m11 = m1.match(/\$\{*\d+\:*(\w+)*\}*/)[1]
 ///*
 //var m2 = ["n", "na", "nam", "name"]
