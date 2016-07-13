@@ -1,3 +1,9 @@
+///
+// Space.
+//
+// margin padding & position.
+///
+
 fill-x()
   l 0
   r 0
@@ -8,9 +14,9 @@ fill-y()
 
 fill(dir = a, fix = false)
   if fix
-    pos abso
-  else
     pos fixed
+  else
+    pos abso
 
   if dir is x
     fill-x()

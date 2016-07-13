@@ -18,6 +18,7 @@ components = "src/components"
 images = "src/images"
 fonts = "src/fonts"
 takerSuffix = "-lib"
+injects = "src/__rabbit__"
 
 [ignores]
 private = "_"
