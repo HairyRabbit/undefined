@@ -56,5 +56,7 @@ src/zhihu
 src/emusic
 src/Application
 src/components
-
 src/Snippets
+
+# Injects
+src/__rabbit__/Counter
