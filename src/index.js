@@ -4,7 +4,7 @@ import $ from 'jquery'
 import { render } from 'react-dom'
 import Snippets from 'Snippets/Main.elm'
 
-import Slider from 'components/Slider/index.jsx'
+import Slider from 'Components/Slider/index.jsx'
 
 
 class App extends Component {
