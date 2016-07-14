@@ -20,7 +20,7 @@ body
 .gg
   size 100%
   pos abso
-  pointer-events none
+  //pointer-events none
   &-container
     size 100%
     pos rela
@@ -38,13 +38,13 @@ side-person-w = 6rem
 side-menu-w   = 12rem
 
 .side-person
-  fill(l, true)
+  fill(l)
   bg #1d2531
   w side-person-w
   
   
 .side-menu
-  fill(y, true)
+  fill(y)
   bg #222c3c
   l side-person-w
   w side-menu-w
@@ -80,3 +80,14 @@ side-menu-w   = 12rem
 
   &.active
     bg #313d4f
+
+.body
+  fill()
+  pl side-person-w + side-menu-w
+
+
+@require "Snippets/_index"
+@require "components/Slider/"
+
+.slider
+  slider()
