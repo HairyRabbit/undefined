@@ -1,0 +1,111 @@
+///
+/// Layout
+///
+
+
+/// Grid base
+
+grid-base()
+  .row:after
+    ctx: ' '
+    dis table
+    clear both
+
+  .grid
+  .grid-last
+    box bdbox
+
+  .grid
+    fl l
+
+  .grid-last
+    box bdbox
+    fl r
+
+
+/// Width
+
+// grid base
+width-base($grid = 12)
+  .width
+    for num in (1..$grid - 1)
+      &--{num}
+        w percentage(num / $grid)
+
+width-hundred()
+  .width
+    for num in (1..10)
+      n = num * 10
+      &--{n}-h
+        w percentage(n / 100)
+
+width-special()
+  .width--a
+    w a
+  .width--f
+    w 100%
+  .width--h
+    w 50%
+  .width--0
+    w 0
+
+
+/// Margin
+
+mar-bottom()
+  .marb
+    mb 1rem
+  .marb--s
+    mb 0.5rem
+  .marb--xs
+    mb 0.25rem
+
+
+/// Padding
+
+pad()
+  .pad
+    pad 1rem
+  .pad--s
+    pad 0.5rem
+  .pad--xs
+    pad 0.25rem
+
+pad-x()
+  .pad-x
+    pad 1rem
+  .pad-x--s
+    pad 0.5rem
+  .pad-x--xs
+    pad 0.25rem
+
+pad-y()
+  .pad-y
+    pad 1rem
+  .pad-y--s
+    pad 0.5rem
+  .pad-y--xs
+    pad 0.25rem
+
+pad-l()
+  .pad-l
+    pad 1rem
+  .pad-l--2x
+    pad 2rem
+  .pad-l--3x
+    pad 3rem
+
+
+/// Container
+
+con-base(w = 100%)
+  .con
+    mx a
+    w w
+
+
+/// List
+
+/// Card
+
+/// Grid
