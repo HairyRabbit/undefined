@@ -18,23 +18,14 @@ class App extends Component {
     }
 }
 
-
 render(
     <App />,
     document.getElementById('main')
 )
 
+/**
+___browserSync___.socket.emit('test', 2333)
 
-/*
-let target = `
-# -*- mode: snippet -*-
-#name : Class
-# --
-var $\{1:name\} = new Class({
-  initialize: function($2) {
-    $0
-  }
-});
-`
+var ws = new WebSocket('ws://localhost:9999')
+ws.send('233')
 */
-
