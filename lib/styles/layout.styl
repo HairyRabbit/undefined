@@ -1,11 +1,11 @@
 ///
-/// Layout
+/// Layout.
 ///
 
 
-/// Grid base
+/// Grid base.
 
-grid-base()
+layout-grid-base()
   .row:after
     ctx: ' '
     dis table
@@ -26,20 +26,21 @@ grid-base()
 /// Width
 
 // grid base
-width-base($grid = 12)
+
+layout-width-base($grid = 12)
   .width
     for num in (1..$grid - 1)
       &--{num}
         w percentage(num / $grid)
 
-width-hundred()
+layout-width-hundred()
   .width
     for num in (1..10)
       n = num * 10
       &--{n}-h
         w percentage(n / 100)
 
-width-special()
+layout-width-special()
   .width--a
     w a
   .width--f
@@ -52,7 +53,7 @@ width-special()
 
 /// Margin
 
-mar-bottom()
+layout-mar-bottom()
   .marb
     mb 1rem
   .marb--s
@@ -63,7 +64,7 @@ mar-bottom()
 
 /// Padding
 
-pad()
+layout-pad()
   .pad
     pad 1rem
   .pad--s
@@ -71,7 +72,7 @@ pad()
   .pad--xs
     pad 0.25rem
 
-pad-x()
+layout-pad-x()
   .pad-x
     pad 1rem
   .pad-x--s
@@ -79,7 +80,7 @@ pad-x()
   .pad-x--xs
     pad 0.25rem
 
-pad-y()
+layout-pad-y()
   .pad-y
     pad 1rem
   .pad-y--s
@@ -87,7 +88,7 @@ pad-y()
   .pad-y--xs
     pad 0.25rem
 
-pad-l()
+layout-pad-l()
   .pad-l
     pad 1rem
   .pad-l--2x
@@ -98,13 +99,15 @@ pad-l()
 
 /// Container
 
-con-base(w = 100%)
+layout-con-base(w = 100%)
   .con
     mx a
     w w
 
 
 /// List
+
+
 
 /// Card
 

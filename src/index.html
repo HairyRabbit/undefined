@@ -1,4 +1,5 @@
 {% import "tpls/macros.html" as $ %}
+{% from "Components/Field/index.html" import field, area  %}
 
 {% block content %}
 <section class="gg-container">
@@ -41,9 +42,43 @@
 </aside>
 
 
-<main id="main" class="body">
+<main class="body">
+  <section id="main"></section>
+  <div class="row">
+    <div class="grid width--4">
+      <div class="pad">
+	{{ field("Enter you username") }}
+      </div>
+    </div>
+    <div class="grid width--4">
+      <div class="pad">
+	{{ field("phone number", value="18322223333", disabled=true) }}
+      </div>
+    </div>
+    <div class="grid width--4">
+      <div class="pad">
+	{{ field("phone number", dark=true) }}
+      </div>
+    </div>
+  </div>
 
-  
+  <div class="row">
+    <div class="grid width--4">
+      <div class="pad">
+	{{ area("Enter you username") }}
+      </div>
+    </div>
+    <div class="grid width--4">
+      <div class="pad">
+	{{ area("Enter you username", value="This is some text", disabled=true) }}
+      </div>
+    </div>
+    <div class="grid width--4">
+      <div class="pad">
+	{{ area("Enter you username", dark=true) }}
+      </div>
+    </div>
+  </div>
 </main>
 {% endblock %}
 
