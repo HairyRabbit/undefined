@@ -14,10 +14,11 @@ src = "src"
 lib = "lib"
 tmp = ".tmp"
 dll = ".tmp"
+test = ".test"
 components = "src/__components__"
+injects = "src/__rabbit__"
 images = "src/images"
 fonts = "src/fonts"
-injects = "src/__rabbit__"
 takerSuffix = "-lib"
 
 [ignores]
