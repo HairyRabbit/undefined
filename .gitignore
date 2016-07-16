@@ -52,11 +52,5 @@ test
 
 
 # Project
-src/zhihu
-src/emusic
-src/Application
-src/__components__
-src/Snippets
-
-# Injects
-src/__rabbit__/Counter
+src/*
+!src/index.*
