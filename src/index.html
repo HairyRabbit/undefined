@@ -1,5 +1,5 @@
 {% import "tpls/macros.html" as $ %}
-{% from "Components/Field/index.html" import field, area  %}
+{% from "Field/index.html" import field, area  %}
 
 {% block content %}
 <section class="gg-container">
@@ -47,17 +47,17 @@
   <div class="row">
     <div class="grid width--4">
       <div class="pad">
-	{{ field("Enter you username") }}
+	{{ field({ default: "Enter you username" }) }}
       </div>
     </div>
     <div class="grid width--4">
       <div class="pad">
-	{{ field("phone number", value="18322223333", disabled=true) }}
+	{{ field({ default: "phone number", value: "18322223333", disabled: true}) }}
       </div>
     </div>
     <div class="grid width--4">
       <div class="pad">
-	{{ field("phone number", dark=true) }}
+	{{ field({ default: "phone number", dark: true }) }}
       </div>
     </div>
   </div>
@@ -65,17 +65,17 @@
   <div class="row">
     <div class="grid width--4">
       <div class="pad">
-	{{ area("Enter you username") }}
+	{{ area({ default: "Enter you username"}) }}
       </div>
     </div>
     <div class="grid width--4">
       <div class="pad">
-	{{ area("Enter you username", value="This is some text", disabled=true) }}
+	{{ area({ default: "Enter you username", value: "This is some text", disabled: true }) }}
       </div>
     </div>
     <div class="grid width--4">
       <div class="pad">
-	{{ area("Enter you username", dark=true) }}
+	{{ area({ default: "Enter you username", dark: true }) }}
       </div>
     </div>
   </div>

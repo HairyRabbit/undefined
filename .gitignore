@@ -55,7 +55,7 @@ test
 src/zhihu
 src/emusic
 src/Application
-src/components
+src/__components__
 src/Snippets
 
 # Injects
