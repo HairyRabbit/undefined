@@ -6,26 +6,29 @@ import Snippets from 'Snippets/Main.elm'
 
 import Slider from 'Slider/index.jsx'
 
-
 class App extends Component {
-    render() {
-	return (
-	  <div>
-	    <Elm src={Snippets.Main} />
-	    <Slider />
-	  </div>
-	)
-    }
+  render() {
+	  return (
+	      <div>
+	      <Elm src={Snippets.Main} />
+	      <Slider />
+	      </div>
+	  )
+  }
 }
 
 render(
     <App />,
-    document.getElementById('main')
+  document.getElementById('main')
 )
 
-/**
-___browserSync___.socket.emit('test', 2333)
+import greet from './test.ts'
 
-var ws = new WebSocket('ws://localhost:9999')
-ws.send('233')
+console.log(greet('111'))
+
+/**
+   ___browserSync___.socket.emit('test', 2333)
+
+   var ws = new WebSocket('ws://localhost:9999')
+   ws.send('233')
 */

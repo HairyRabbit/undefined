@@ -36,6 +36,8 @@ node_modules
 elm-stuff/
 repl-temp-*
 
+# Typing for Typescript
+typings
 
 # Custom config
 # Ignore build dirs

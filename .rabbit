@@ -3,6 +3,7 @@
 # Rabbit config file.
 #
 #
+
 version = "1.0.1"
 
 [server]
@@ -38,5 +39,5 @@ timeout = 5000.0
 keepone = true
 
 [dll]
-blackList = ["testaaaa", "test1"]
+blackList = ["angular2", "reflect-metadata", "zone.js", "rxjs"]
 failbackStrategy = "ignore"
