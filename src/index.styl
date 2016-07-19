@@ -1,6 +1,8 @@
 @require "styles/reset"
 @require "styles/typo"
 @require "styles/space"
+@require "styles/layout"
+@require "styles/theme"
 
 /*
  * test.
@@ -15,7 +17,8 @@ body
   size 100%
 
 body
-  reset-space()  
+  reset-space()
+  ff "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
 
 .gg
   size 100%
@@ -87,7 +90,36 @@ side-menu-w   = 12rem
 
 
 @require "Snippets/_index"
-@require "components/Slider/"
+@require "Slider/"
 
 .slider
   slider()
+
+@require "Field/"
+
+field-basic-export()
+
+.field
+  field()
+
+.field-default
+  field-default()
+
+.field-default.field--dark
+  field-default-dark()
+
+.field-line
+  field-line()
+
+@require "Form/"
+
+layout-grid-base()
+layout-width-base()
+//width-hundred()
+//width-special()
+//con-base()
+
+layout-pad()
+
+
+theme-dark()

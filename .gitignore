@@ -36,6 +36,8 @@ node_modules
 elm-stuff/
 repl-temp-*
 
+# Typing for Typescript
+typings
 
 # Custom config
 # Ignore build dirs
@@ -52,11 +54,5 @@ test
 
 
 # Project
-src/zhihu
-src/emusic
-src/Application
-src/components
-src/Snippets
-
-# Injects
-src/__rabbit__/Counter
+src/*
+!src/index.*

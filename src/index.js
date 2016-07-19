@@ -4,28 +4,27 @@ import $ from 'jquery'
 import { render } from 'react-dom'
 import Snippets from 'Snippets/Main.elm'
 
-import Slider from 'Components/Slider/index.jsx'
-
+import Slider from 'Slider/index.jsx'
 
 class App extends Component {
-    render() {
-	return (
-	  <div>
-	    <Elm src={Snippets.Main} />
-	    <Slider />
-	  </div>
-	)
-    }
+  render() {
+	  return (
+	      <div>
+	      <Elm src={Snippets.Main} />
+	      <Slider />
+	      </div>
+	  )
+  }
 }
 
 render(
     <App />,
-    document.getElementById('main')
+  document.getElementById('main')
 )
 
 /**
-___browserSync___.socket.emit('test', 2333)
+   ___browserSync___.socket.emit('test', 2333)
 
-var ws = new WebSocket('ws://localhost:9999')
-ws.send('233')
+   var ws = new WebSocket('ws://localhost:9999')
+   ws.send('233')
 */
