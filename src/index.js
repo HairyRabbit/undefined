@@ -22,10 +22,6 @@ render(
   document.getElementById('main')
 )
 
-import greet from './test.ts'
-
-console.log(greet('111'))
-
 /**
    ___browserSync___.socket.emit('test', 2333)
 
