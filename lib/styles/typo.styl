@@ -5,7 +5,7 @@ ff = Arial, Helvetica, sans-serif
 // 
 // http://www.modularscale.com/?1.1&em&1.25&web&text
 fz-ratio  = 1.25
-fz-base   = 1.1rem
+fz-base   = 1.0rem
 fz-prefix = "fz"
 
 fz-calc(base, ratio)
@@ -17,6 +17,9 @@ fz-c3 = fz-calc(fz-c2, fz-ratio - 1)
 fz-c4 = fz-calc(fz-c3, fz-ratio - 1)
 fz-c5 = fz-calc(fz-c4, fz-ratio - 1)
 fz-c6 = fz-calc(fz-c5, fz-ratio - 1)
+fz-c7 = fz-calc(fz-c6, fz-ratio - 1)
+fz-c8 = fz-calc(fz-c7, fz-ratio - 1)
+fz-c9 = fz-calc(fz-c8, fz-ratio - 1)
 
 fz-list = {
   s:    fz-c1,
@@ -37,9 +40,9 @@ html
 body
   lh 1.4
   ff ff
-  fz 14px
+  fz 16px
 
-/*
+
 p
 h6
 h5
@@ -57,4 +60,8 @@ for n, i in (1...6)
   h{i}
     fw bold
 
-*/
+
+typo-display()
+  .display--1
+    fz fz-c7
+    fw light

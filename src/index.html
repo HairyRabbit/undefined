@@ -1,3 +1,5 @@
+{# -*- mode: jinja2 -*- #}
+
 {% import "tpls/macros.html" as $ %}
 {% from "Field/index.html" import field, area, fieldLine  %}
 {% from "Form/index.html" import formRow %}
@@ -10,18 +12,18 @@
   <aside class="side-person">
     <ul class="person">
       <li>
-        <a href="#" class="person-item">
+	      <a href="#" class="person-item">
 	        <div class="avatar">
 	          <img alt="avatar" class="avatar__img" src="https://avatars3.githubusercontent.com/u/5752902?v=3&s=460" />
 	        </div>
-        </a>
+	      </a>
       </li>
       <li class="item">
-        <a href="#">
+	      <a href="#">
 	        <div class="avatar">
 	          <img alt="avatar" class="avatar__img" src="https://avatars3.githubusercontent.com/u/5752902?v=3&s=460" />
 	        </div>
-        </a>
+	      </a>
       </li>
     </ul>
   </aside>
@@ -29,16 +31,16 @@
   <aside class="side-menu">
     <header class="menu-title">MENU</header>
     <nav><ul class="menu">
-        <li><a href="#" class="menu-item">builder detail</a></li>
-        <li><a href="#" class="menu-item active">rabbit profile</a></li>
-        <li><a href="#" class="menu-item">dll blacklist</a></li>
-        <li><a href="#" class="menu-item">emacs yasnippets</a></li>
-        <li><a href="#" class="menu-item">written blog</a></li>
-        <li><a href="#" class="menu-item">projects</a></li>
-        <li><a href="#" class="menu-item">music player</a></li>
-        <li><a href="#" class="menu-item">inject helps</a></li>
-        <li><a href="#" class="menu-item">components</a></li>
-        <li><a href="#" class="menu-item">github live</a></li>
+	      <li><a href="#" class="menu-item">builder detail</a></li>
+	      <li><a href="#" class="menu-item active">rabbit profile</a></li>
+	      <li><a href="#" class="menu-item">dll blacklist</a></li>
+	      <li><a href="#" class="menu-item">emacs yasnippets</a></li>
+	      <li><a href="#" class="menu-item">written blog</a></li>
+	      <li><a href="#" class="menu-item">projects</a></li>
+	      <li><a href="#" class="menu-item">music player</a></li>
+	      <li><a href="#" class="menu-item">inject helps</a></li>
+	      <li><a href="#" class="menu-item">components</a></li>
+	      <li><a href="#" class="menu-item">github live</a></li>
     </ul></nav>
   </aside>
 
@@ -48,61 +50,61 @@
     
     <div class="row">
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ field({ default: "Enter you username" }) }}
-        </div>
+	      </div>
       </div>
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ field({ default: "phone number", value: "18322223333", disabled: true}) }}
-        </div>
+	      </div>
       </div>
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ field({ default: "phone number", dark: true }) }}
-        </div>
+	      </div>
       </div>
     </div>
 
     <div class="row">
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ area({ default: "Enter you username"}) }}
-        </div>
+	      </div>
       </div>
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ area({ default: "Enter you username", value: "This is some text", disabled: true }) }}
-        </div>
+	      </div>
       </div>
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ area({ default: "Enter you username", dark: true }) }}
-        </div>
+	      </div>
       </div>
     </div>
 
     <div class="row">
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ fieldLine({ default: "Enter you username" }) }}
-        </div>
+	      </div>
       </div>
       <div class="grid width--4">
-        <div class="pad">
+	      <div class="pad">
 	        {{ fieldLine({ default: "phone number", value: "18322223333", disabled: true}) }}
-        </div>
+	      </div>
       </div>
     </div>
 
     <div class="row">
       <div class="grid width--3">
-        1
+	      1
       </div>
       <div class="grid width--6">
-        <div class="pad">
+	      <div class="pad">
           {{formRow()}}
-        </div>
+	      </div>
       </div>
     </div>
 
