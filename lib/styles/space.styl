@@ -12,11 +12,13 @@ fill-y()
   t 0
   b 0      
 
-fill(dir = a, fix = false)
+fill(dir = a, fix = false, $z = 1)
   if fix
     pos fixed
   else
     pos abso
+
+  z $z
 
   if dir is x
     fill-x()

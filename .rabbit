@@ -39,5 +39,5 @@ timeout = 5000.0
 keepone = true
 
 [dll]
-blackList = ["angular2", "reflect-metadata", "zone.js", "rxjs"]
+blackList = ["angular2", "reflect-metadata", "zone.js", "rxjs", "ionicons"]
 failbackStrategy = "ignore"

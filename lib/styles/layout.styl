@@ -40,6 +40,12 @@ layout-width-hundred()
       &--{n}-h
         w percentage(n / 100)
 
+layout-width-fraction()
+  .width
+    for num in (1..9)
+      &--{num}-f
+        w percentage(1 / num)
+
 layout-width-special()
   .width--a
     w a
@@ -60,6 +66,12 @@ layout-mar-bottom()
     mb 0.5rem
   .marb--xs
     mb 0.25rem
+  .marb--l
+    mb 1.5rem
+  .marb--xl
+    mb 2rem
+  .marb--xxl
+    mb 3rem
 
 
 /// Padding
