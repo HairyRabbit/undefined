@@ -1,13 +1,16 @@
 {
-    presets: [
-      'es2015',
-      'es2015-webpack',
-      'react',
-      'stage-0',
-    ],
-    ignore: [
-      'node_modules/nunjucks/*',
-      'node_modules/core-js/*',
-    ],
-    sourceMaps: 'inline'
+  presets: [
+    'es2015',
+    'es2015-webpack',
+    'react',
+    'stage-0',
+  ],
+  ignore: [
+    'node_modules/nunjucks/*',
+    'node_modules/core-js/*',
+  ],
+  sourceMaps: 'inline',
+  plugins: [
+    //'transform-es2015-modules-systemjs',
+  ]
 }
