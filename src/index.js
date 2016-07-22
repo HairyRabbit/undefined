@@ -28,3 +28,7 @@ render(
    var ws = new WebSocket('ws://localhost:9999')
    ws.send('233')
 */
+var ws = new WebSocket('ws://localhost:9999')
+___browserSync___.socket.on('LocateError', queries => {
+  ws.send(queries)
+})

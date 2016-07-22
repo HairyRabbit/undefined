@@ -1,4 +1,4 @@
-# Rabbit 专用不科学实验性超级智能超绝Super超wonderful超excellent打包工具
+# Rabbit 专用不科学实验性超级智能超绝super超wonderful超excellent华丽但不实用打包工具
 
 那么首先，什么是专用的？
 
