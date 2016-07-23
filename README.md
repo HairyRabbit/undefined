@@ -1,4 +1,8 @@
-# Rabbit 专用不科学实验性超级智能超绝super超wonderful超excellent华丽但不实用打包工具
+# Happy Hacking
+
+[![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://github.com/syl20bnr/spacemacs)
+
+## Rabbit 专用不科学实验性超级智能超绝super超wonderful超excellent华丽但不实用的打包工具
 
 那么首先，什么是专用的？
 
