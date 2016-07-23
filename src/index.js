@@ -9,16 +9,16 @@ import Slider from 'Slider/index.jsx'
 class App extends Component {
   render() {
 	  return (
-	      <div>
+	    <div>
 	      <Elm src={Snippets.Main} />
 	      <Slider />
-	      </div>
+	    </div>
 	  )
   }
 }
 
 render(
-    <App />,
+  <App />,
   document.getElementById('main')
 )
 
@@ -27,7 +27,7 @@ render(
 
    var ws = new WebSocket('ws://localhost:9999')
    ws.send('233')
-*/
+ */
 var ws = new WebSocket('ws://localhost:9999')
 ___browserSync___.socket.on('LocateError', queries => {
   ws.send(queries)
