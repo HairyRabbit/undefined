@@ -4,7 +4,7 @@ import Html exposing (..)
 import Html.App as App
 import Html.Attributes exposing (..)
 import Gif
-import Draggable.Draggable exposing (..)
+
 
 main =
     App.program
@@ -96,4 +96,4 @@ subscriptions model =
         , Sub.map Right (Gif.subscriptions model.right)
         ]
         `always` Debug.log "model:" model
-           
+
