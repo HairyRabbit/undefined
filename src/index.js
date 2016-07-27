@@ -20,13 +20,13 @@ class App extends Component {
 function setupPorts(ports) {
     console.log( ports )
 
-    ports.fetchSize.subscribe(uuid => {
-        let el = $(`[data-uuid=${uuid}]`)
+    ports.getSize.subscribe(uuid => {
+        let $el = $(`[data-uuid=${uuid}]`)
         //let elWidth = el.getBoundingClientRect().width
-        let elWidth = el.find('.slider__line').width()
+        //let elWidth = el.find('.slider__line').width()
 
-        //ports.precentage.send(elWidth)
-        setTimeout(_ => ports.precentage.send(elWidth), 0)
+        $(window).on('resize', _ => ports.setSize.send($el.find('.slider__line').width()))
+        setTimeout(_ => ports.setSize.send($el.find('.slider__line').width()), 0)
     })
 }
 

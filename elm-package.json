@@ -1,12 +1,13 @@
 {
-    "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
-    "license": "BSD3",
+    "version": "0.0.1",
+    "summary": "A private project for Rabbit builder.",
+    "repository": "https://github.com/yuffiy/undefind.git",
+    "license": "MIT",
     "source-directories": [
         "./src",
-	"./src/__components__",
-	"./src/__rabbit__"
+        "./lib/utlis/elm",
+	      "./src/__components__",
+	      "./src/__rabbit__"
     ],
     "exposed-modules": [],
     "dependencies": {
