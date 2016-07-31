@@ -1,4 +1,9 @@
 [ignore]
+.*/node_modules/.*
+.*/.test/.*
+.*/.happypack/.*
+.*/.tmp/.*
+.*/typings/.*
 
 [include]
 

@@ -11,6 +11,6 @@
   ],
   sourceMaps: 'inline',
   plugins: [
-    //'transform-es2015-modules-systemjs',
+    'transform-flow-strip-types'
   ]
 }
