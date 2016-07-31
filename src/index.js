@@ -25,8 +25,20 @@ function setupPorts(ports) {
         //let elWidth = el.getBoundingClientRect().width
         //let elWidth = el.find('.slider__line').width()
 
-        $(window).on('resize', _ => ports.setSize.send($el.find('.slider__line').width()))
-        setTimeout(_ => ports.setSize.send($el.find('.slider__line').width()), 0)
+        const getSliderSize = uuid => _ => {
+            let $el = $(`[data-uuid=${uuid}]`).find('.slider__line')
+            return {
+                left:  $el.offset().left,
+                width: $el.width()
+            }
+        }
+
+        let fx = getSliderSize(uuid)
+
+        //console.log($el.find('.slider__line').offset())
+
+        $(window).on('resize', _ => ports.setSize.send(fx()))
+        setTimeout(_ => ports.setSize.send(fx()), 0)
     })
 }
 
