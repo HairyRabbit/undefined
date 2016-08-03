@@ -1,0 +1,99 @@
+////
+/// Rabbit/Util Position.
+///
+/// @namespace util.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+
+///
+/// Fill.
+///
+/// fill contianer utils.
+///
+
+/// code:
+
+
+// Fill horizontal direction helper.
+// @function
+// @helper
+
+u-fill-x()
+  l 0
+  r 0
+
+
+// Fill vertical direction helper.
+// @function
+// @helper
+
+u-fill-y()
+  t 0
+  b 0      
+
+
+// Main.
+// @function
+
+u-fill($dir = a, $fix = false, $z = 1)
+
+  // set position value.
+  if $fix
+    pos fixed
+  else
+    pos abso
+
+
+  // set z-index.
+  z $z
+
+
+  // direction.
+  if $dir is x
+    u-fill-x()
+  else if $dir is y
+    u-fill-y()
+  else if $dir is t
+    t 0
+    u-fill-x()
+  else if $dir is b
+    b 0
+    u-fill-x()
+  else if $dir is l
+    l 0
+    u-fill-y()
+  else if $dir is r
+    r 0
+    u-fill-y()
+  else if $dir is tl
+    t 0
+    l 0
+  else if $dir is tr
+    t 0
+    r 0
+  else if $dir is bl
+    b 0
+    l 0
+  else if $dir is br
+    b 0
+    r 0
+  else
+    u-fill-x()
+    u-fill-y()
+
+
+// Export.
+// @function
+
+u-fill-export($b = "u-fill", $m = "fixed", $exports = ())
+  $directions = (a x y t r b l tl tr bl br)
+  for $n in $directions
+    .{$b}-{$n}
+      u-fill($n)
+    .{$b}-{$n}--{$m}
+      u-fill($n, true)
+
+
+/// code end here.
