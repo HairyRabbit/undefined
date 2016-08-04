@@ -51,7 +51,7 @@ test
 .lib
 .happypack
 .dll
-
+$Recycle.Bin
 
 # Project
 src/*
