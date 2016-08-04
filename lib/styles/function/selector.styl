@@ -1,0 +1,23 @@
+// -*- coding: utf-8 -*-
+// -*- mode: stylus -*-
+
+
+////
+/// Rabbit/Function Selector.
+///
+/// @namespace function.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+// Normalize float.
+//
+// @function
+// @param {number} $number
+// @return {number}
+//
+// @example
+//   0.25 -> 0d25
+//   1 -> 1
+normalizeNumber($number)
+  s(replace('\.', d, s('%s', $number)))

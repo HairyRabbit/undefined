@@ -1,0 +1,20 @@
+// -*- mode: stylus -*-
+
+
+////
+/// Rabbit/Function Direction.
+///
+/// @namespace function.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+isAll($dir)
+  $dir == a
+
+  
+exceptDefaultSelector($se, $dir)
+  if isAll($dir)
+    s('%s', s($se))
+  else
+    s('%s-%s', s($se), s($dir))

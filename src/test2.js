@@ -11,3 +11,5 @@ if(module.hot) {
 console.log(
     [{ a: 1 }, { b: 2 }].reduce(::Object.assign, {})
 )
+
+export default { a: 1 }

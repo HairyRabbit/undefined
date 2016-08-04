@@ -1,0 +1,111 @@
+// -*- coding: utf-8 -*-
+// -*- mode: stylus -*-
+
+
+////
+/// Rabbit/Util Box.
+///
+/// @namespace util.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+@require "styles/function/direction"
+@require "styles/function/selector"
+
+
+
+///
+// Padding.
+//
+// Padding utils.
+///
+
+/// code:
+
+
+// Main.
+// @function
+
+u-pad($dir = a, $val = 0)
+  if $dir is x
+    px $val
+  else if $dir is y
+    py $val
+  else if $dir is t
+    pt $val
+  else if $dir is r
+    pr $val
+  else if $dir is b
+    pb $var
+  else if $dir is l
+    pl $val
+  else
+    pad $val
+
+
+// Export.
+// @function
+
+u-pad-export($b = "u-pad")
+  $vals = (1 0.5 0.25 0.75 1.5)
+  $dirs = (a x y)
+  for $val in $vals
+    $m = normalizeNumber($val)
+
+    for $dir in $dirs
+      $se = exceptDefaultSelector($b, $dir)
+      .{$se}--{$m}
+        pad unit($val, rem)
+    
+
+
+/// code end here.
+
+
+
+
+///
+// Margin.
+//
+// Margin utils.
+///
+
+/// code:
+
+
+// Main.
+// @function
+
+u-mar($dir = a, $val = 0)
+  if $dir is x
+    mx $val
+  else if $dir is y
+    my $val
+  else if $dir is t
+    mt $val
+  else if $dir is r
+    mr $val
+  else if $dir is b
+    mb $var
+  else if $dir is l
+    ml $val
+  else
+    mar $val
+
+
+// Export.
+// @function
+
+u-mar-export($b = "u-mar")
+  $vals = (1 0.5 0.25)
+  $dirs = (t b)
+  for $val in $vals
+    $m = normalizeNumber($val)
+
+    for $dir in $dirs
+      $se = exceptDefaultSelector($b, $dir)
+      .{$se}--{$m}
+        mar unit($val, rem)
+    
+/// code end here.

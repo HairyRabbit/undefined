@@ -89,12 +89,16 @@ u-fill($dir = a, $fix = false, $z = 1)
 
 // @TODO Not export all styles.
 u-fill-export($b = "u-fill", $m = "fixed", $exports = ())
-  $directions = (a x y t r b l tl tr bl br)
+  $directions = (x y t r b l tl tr bl br)
   for $n in $directions
     .{$b}-{$n}
       u-fill($n)
     .{$b}-{$n}--{$m}
       u-fill($n, true)
+  .{$b}
+    u-fill()
+  .{$b}-{$m}
+    u-fill(a, true)
 
 
 /// code end here.
