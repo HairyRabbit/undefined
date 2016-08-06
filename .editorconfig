@@ -7,18 +7,21 @@ root = true
 [*]
 end_of_line = lf
 insert_final_newline = true
+charset = utf-8
+indent_style = space
+indent_size = 2
 
 # Matches multiple files with brace expansion notation
 # Set default charset
-[*.{js,styl,html}]
-charset = utf-8
+#[*.{js,styl,html}]
+#charset = utf-8
 
 # Indentation override for all JS under lib directory
-[{lib,src}/**.{styl,js,html,elm}]
-indent_style = space
-indent_size = 2
+#[{lib,src}/**.{styl,js,html,elm}]
+#indent_style = space
+#indent_size = 2
 
 # Matches the exact files either package.json or .travis.yml
-[{*.json,.travis.yml,.babelrc}]
-indent_style = space
-indent_size = 2
+#[{*.json,.travis.yml,.babelrc}]
+#indent_style = space
+#indent_size = 2

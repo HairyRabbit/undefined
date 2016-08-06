@@ -96,7 +96,9 @@
   "scripts": {
     "test1": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./",
     "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S",
-    "components": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/components-builder.js --cwd=./"
+    "components": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/components-builder.js --cwd=./",
+    "prod": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/prod-builder.js --cwd=./"
+
   },
   "repository": {
     "type": "git",
