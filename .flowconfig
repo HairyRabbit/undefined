@@ -3,9 +3,11 @@
 .*/.test/.*
 .*/.happypack/.*
 .*/.tmp/.*
+.*/.bin/.*
 .*/typings/.*
 
 [include]
+src/icon-pool/*.js
 
 [libs]
 

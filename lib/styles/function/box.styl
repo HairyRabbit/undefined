@@ -1,0 +1,62 @@
+// -*- coding: utf-8 -*-
+// -*- mode: stylus -*-
+
+
+////
+/// Rabbit/Function Box Modules.
+///
+/// @namespace function.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+@require 'styles/function/font'
+
+
+// Compute content height.
+//
+// Default return a `rem` value.
+//
+// @function
+// @param {unit} $fz - font size. eg 16px
+// @param {number} $lh - line height. eg 1.5
+// @param {unit} $base - base font size.
+// @param {string} $flag - `rem` or `em`. [rem|em].
+// @return {unit}
+//
+// @example
+//   cmpH(18px, 1.5, 16px) -> 1.6875rem
+//   cmpH(18px, 1.5, 16px, 'em') -> 1.6875em
+//   cmpH(2rem, 1.5) -> 3rem
+//   cmpH(1em, 2) -> 2em
+cmpH($fz, $lh, $base = 16px, $flag = 'rem')
+  $u = unit($fz)
+  if $u == 'px'
+    if $flag == 'em'
+      px-rem($base, $fz * $lh)
+    else
+      px-em($base, $fz * $lh)
+  else
+    $fz * $lh
+
+
+// Compute padding without border.
+//
+// @function
+// @param {unit} $h - computed height. eg 1.6rem
+// @param {unit} $pt - padding top. eg 1rem
+// @param {&optional unit} $pb - padding bottom. [$pt]. eg 1rem
+// @return {unit}
+//
+// @example
+//   cmpPad(1.5rem, 1rem) -> 3.5rem
+cmpPad($h, $pt, $pb = $pt)
+  $h + $pt + $pb
+
+
+cmpPadBd($hp, $bdt, $bdb = $bdt)
+  $hp + $bdt + $bdb
+
+
+vaPad($h, $ch)
+  (($ch - $h) / 2)

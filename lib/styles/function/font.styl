@@ -1,0 +1,62 @@
+// -*- coding: utf-8 -*-
+// -*- mode: stylus -*-
+
+
+////
+/// Rabbit/Function Font Unit Convert.
+///
+/// @namespace function.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+// Convert `em` to `px`.
+//
+// @function
+// @param {unit} $base - base font size. eg 16px
+// @param {unit} $em - fong size with `em` unit. eg 1em
+// @return {unit}
+//
+// @example
+//   em-px(16px, 2em) -> 32px
+em-px($base, $em)
+  unit(($em * $base), px)
+
+
+// Convert `rem` to `px`.
+//
+// @function
+// @param {unit} $base - base font size. eg 16px
+// @param {unit} $rem - fong size with `rem` unit. eg 1rem
+// @return {unit}
+//
+// @example
+//   rem-px(16px, 2rem) -> 32px
+rem-px($base, $rem)
+  unit(($rem * $base), px)
+
+
+// Convert `px` to `em`.
+//
+// @function
+// @param {unit} $base - base font size. eg 16px
+// @param {unit} $em - fong size with `em` unit. eg 1em
+// @return {unit}
+//
+// @example
+//   em-px(16px, 2em) -> 32px
+px-em($base, $px)
+  unit(($px / $base), em)
+  
+
+// Convert `px` to `rem`.
+//
+// @function
+// @param {unit} $base - base font size. eg 16px
+// @param {unit} $rem - fong size with `rem` unit. eg 1rem
+// @return {unit}
+//
+// @example
+//   rem-px(16px, 2rem) -> 32px
+px-rem($base, $px)
+  unit(($px / $base), rem)
