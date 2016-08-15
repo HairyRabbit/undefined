@@ -1,0 +1,89 @@
+////
+/// Rabbit/Util Grid.
+///
+/// @namespace util.
+/// @author Rabbit<yfhj1990@hotmail.com>
+////
+
+
+
+///
+// Grid.
+//
+// Grid system.
+///
+
+/// code:
+
+
+u-clearfix()
+  &:after
+    ctx " "
+    dis table
+    clear both
+
+u-row($gutter = 1.5rem, $flex = false)
+
+  mx -($gutter / 2)
+  
+  if !$flex
+    u-clearfix
+  else
+    dis flex
+    flex 0 1 a
+    flexd row
+    flexw wrap
+    
+
+// Grid.
+// @mixin
+
+u-grid($gutter = 1.5rem, $last = false, $flex = false)
+
+  px ($gutter / 2)
+
+  if !$flex
+    fl $last ? r : l
+  else
+    flex 1 0 a
+    flexd col
+
+
+// Export.
+// @mixin  
+
+u-grid-export(
+  $gutter = 1.5,
+  $bRow   = "row",
+  $bGrid  = "grid",
+  $isFlex = true,
+  $isMixinWidth = false,
+  $isExportRow  = true,
+  $isExportGrid = true,
+  $isExportGridOffset = false,
+  $isExportGridPull = false,
+  $isExportGridPush = false,
+  $isExportGridLast = true,
+  $isLastMixinWidth = false,
+  $mGridLast = "last"
+)
+
+  // Export Row basic.
+  if $isExportRow
+    .{$bRow}
+      u-row $gutter $isFlex
+
+      
+  // Export Grid basic.
+  if $isExportGrid
+    .{$bGrid}
+      u-grid $gutter $isExportGridLast $isFlex
+
+      
+  // Export Grid from right.
+  if $isExportGridLast
+    .{$bGrid}-{$mGridLast}
+      u-grid $gutter $isExportGridLast
+      
+
+/// code end here.
