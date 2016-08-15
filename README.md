@@ -112,7 +112,7 @@ stylus utils 中的 naming 约定为：
 
 ### stylus modules import and export
 
-每个工具因为都是mixin，所以都有个导出函数来导出工具类，比如`u-grid`会有对应的`u-grid-export`：
+每个工具因为都是mixin，所以都有一个导出函数用来导出工具类，例如`u-grid`就会有对应的`u-grid-export`：
 
 ```stylus
 
@@ -168,13 +168,13 @@ u-grid-export(
 @require "u:grid[]"
 ```
 
-加了`[]`后，会自动执行`u-{tool}-export`函数。当然，方括号中可以写传递给导出函数的参数：
+加了`[]`后，会自动执行`u-<namespace>-export`函数。当然，方括号中可以写传递给导出函数的参数：
 
 ```stylus
 @require "u:grid[$isFlex:true,$isExportGridLast:false]"
 ```
 
-注意这里的参数是**1:1**传递给函数的，如果格式不对，或有特殊符号，会报错的说。
+注意这里的参数是 **1:1** 传递给函数的，如果格式不对，或有特殊符号，会报错的说。
 
 #### **从配置文件读取合并**
 
