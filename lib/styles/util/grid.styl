@@ -16,11 +16,26 @@
 /// code:
 
 
+// Clearfix.
+// @mixin
+
 u-clearfix()
   &:after
     ctx " "
     dis table
     clear both
+
+
+///
+// Row.
+//
+// Float Base or Flex Base layout, default use `float`.
+//
+// @mixin
+//
+// @param {unit} [$gutter=1.5rem] - Grid gutters.
+// @param {boolean} [$flex=false] - Switch to flex.
+///
 
 u-row($gutter = 1.5rem, $flex = false)
 
@@ -49,11 +64,13 @@ u-grid($gutter = 1.5rem, $last = false, $flex = false)
     flexd col
 
 
+///
 // Export.
-// @mixin  
+// @mixin
+///
 
 u-grid-export(
-  $gutter = 1.5,
+  $gutter = 1.5rem,
   $bRow   = "row",
   $bGrid  = "grid",
   $isFlex = true,
