@@ -87,5 +87,25 @@ new HappyPack({
 监听builder文件夹，发生变化后会自动重启兔builder
 
 
-## HTML live
+## CSS live
+
+
+### CSS Naming
+
+这里约定了 stylus/styles 中的命名惯例。
+
+stylus utils 中的 naming 约定为：
+
+```
+[_]<Namespace>-<ClassName>[-<ChildClassName>][--<Modifier>]
+```
+
+其中，以`_`开头的表示为私有，不应该被导出，也不应该被使用。
+
+目前只规定了两种`Namespace`：
+
+* c - Components. e.g `.c-btn`
+* u - Utilities.  e.g `.u-fill`
+
+在`lib/`中只能找到**u**开头的工具，组件的话因为拆出去了，需要单独加载。
 
