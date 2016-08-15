@@ -87,10 +87,10 @@ new HappyPack({
 监听builder文件夹，发生变化后会自动重启兔builder
 
 
-## CSS live
+## CSS Live
 
 
-### CSS Naming
+### css naming
 
 这里约定了 stylus/styles 中的命名惯例。
 
@@ -109,3 +109,77 @@ stylus utils 中的 naming 约定为：
 
 在`lib/`中只能找到**u**开头的工具，组件的话因为拆出去了，需要单独加载。
 
+
+### stylus modules import and export
+
+每个工具因为都是mixin，所以都有个导出函数来导出工具类，比如`u-grid`会有对应的`u-grid-export`：
+
+```stylus
+
+u-grid-export(
+  $gutter = 1.5rem,
+  $bRow   = "row",
+  $bGrid  = "grid",
+  $isFlex = true,
+  $isMixinWidth = false,
+  $isExportRow  = true,
+  $isExportGrid = true,
+  $isExportGridOffset = false,
+  $isExportGridPull = false,
+  $isExportGridPush = false,
+  $isExportGridLast = true,
+  $isLastMixinWidth = false,
+  $mGridLast = "last"
+)
+
+  // Export Row basic.
+  if $isExportRow
+    .{$bRow}
+      u-row $gutter $isFlex
+
+      
+  // Export Grid basic.
+  if $isExportGrid
+    .{$bGrid}
+      u-grid $gutter $isExportGridLast $isFlex
+
+      
+  // Export Grid from right.
+  if $isExportGridLast
+    .{$bGrid}-{$mGridLast}
+      u-grid $gutter $isExportGridLast
+      
+```
+
+所以对应的导入会有几种情况：
+
+#### **默认引入**
+
+```stylus
+@require "u:grid"
+```
+
+默认行为，不会导出任何样式。
+
+
+#### **自动导出**
+
+```stylus
+@require "u:grid[]"
+```
+
+加了`[]`后，会自动执行`u-{tool}-export`函数。当然，方括号中可以写传递给导出函数的参数：
+
+```stylus
+@require "u:grid[$isFlex:true,$isExportGridLast:false]"
+```
+
+注意这里的参数是**1:1**传递给函数的，如果格式不对，或有特殊符号，会报错的说。
+
+#### **从配置文件读取合并**
+
+```stylus
+//@Todos
+```
+
+这样会从`rabbit.json`中读取配置，并作为参数传递给导出函数。
