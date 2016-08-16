@@ -112,6 +112,60 @@ stylus utils 中的 naming 约定为：
 
 ### stylus modules import and export
 
+#### stylus 中的导入规则
+
+stylus 中有两个关键字用来导入，分别是`@import`和`@require`。他们的区别是，**@require**只导入一次，而**@import**相当于载入脚本，可以多次导入。
+
+需要注意的地方是，如果使用**@import**来导入**css**文件：
+
+```stylus
+@import "index.css"
+```
+
+他会原样转义出来，而不是将css文件导入，可能是因为@import也是css的关键字吧：
+
+```css
+@import "index.css"
+```
+
+不过用来导入styl文件的话就不会了。stylus 的路径规则有两个，和 node 类似。首先 stylus 有一个类似的 path 变量，他会在 path 变量给定的数组中搜索，这里的 path 需要提前配置：
+
+```js
+function stylusOption() {
+  return {
+    include: env.paths,
+  }
+}
+```
+
+然后是搜索规则，比如下面的导入：
+
+```stylus
+@import "module"
+```
+
+这样 stylus 会搜索如下两个路劲：
+
+* `module.styl`
+* `module/index.styl`
+
+
+stylus 的导入也可以嵌套进选择器中，这样对于**@media**会很有利：
+
+```stylus
+@media mobile
+  @import "mobile"
+```
+
+值得一提的是，stylus的路劲规则支持**glob**，这就是说可以使用`*`来导入文件夹下的全部 styl 文件：
+
+```stylus
+@import "component/*"
+```
+
+
+#### Rabbit 专用导入规则
+
 每个工具因为都是mixin，所以都有一个导出函数用来导出工具类，例如`u-grid`就会有对应的`u-grid-export`：
 
 ```stylus
