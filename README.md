@@ -89,12 +89,20 @@ new HappyPack({
 
 ## CSS Live
 
+Stylus / Postcss
 
-### css naming
+* stylus and css naming
+* stylus modules import and export
+* stylus mixins and functions
+* postcss propery and value alias
+* css layout and views
 
-这里约定了 stylus/styles 中的命名惯例。
 
-stylus utils 中的 naming 约定为：
+### stylus and css naming
+
+这里约定了 stylus/css 中的命名惯例。
+
+在 stylus 的 utils 中， naming 约定为：
 
 ```
 [_]<Namespace>-<ClassName>[-<ChildClassName>][--<Modifier>]
@@ -114,7 +122,7 @@ stylus utils 中的 naming 约定为：
 
 #### stylus 中的导入规则
 
-stylus 中有两个关键字用来导入，分别是`@import`和`@require`。他们的区别是，**@require**只导入一次，而**@import**相当于载入脚本，可以多次导入。
+stylus 中有两个关键字用来导入，分别是`@import`和`@require`。他们的区别是，**@require**只导入一次，而**@import**相当于载入脚本，可以导入多次。
 
 需要注意的地方是，如果使用**@import**来导入**css**文件：
 
@@ -207,7 +215,7 @@ u-grid-export(
 
 所以对应的导入会有几种情况：
 
-#### **默认引入**
+**默认引入**
 
 ```stylus
 @require "u:grid"
@@ -216,7 +224,7 @@ u-grid-export(
 默认行为，不会导出任何样式。
 
 
-#### **自动导出**
+**自动导出**
 
 ```stylus
 @require "u:grid[]"
@@ -230,10 +238,25 @@ u-grid-export(
 
 注意这里的参数是 **1:1** 传递给函数的，如果格式不对，或有特殊符号，会报错的说。
 
-#### **从配置文件读取合并**
+**从配置文件读取合并**
 
 ```stylus
 //@Todos
 ```
 
 这样会从`rabbit.json`中读取配置，并作为参数传递给导出函数。
+
+
+### postcss propery and value alias
+
+
+### stylus mixins and functions
+
+
+### css layout and views
+
+
+### css media and breakpoint
+
+
+### spacemacs and stylus mode plugins
