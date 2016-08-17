@@ -7,6 +7,10 @@ import Snippets from 'Snippets/Main.elm'
 import Slider from 'Slider/index.jsx'
 import SliderPort from 'Slider/port.js'
 
+//import test from './images/photo.jpg'
+
+console.log(test)
+
 class App extends Component {
   render() {
 	  return (

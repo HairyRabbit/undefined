@@ -12,5 +12,14 @@
   sourceMaps: 'inline',
   plugins: [
     'transform-flow-strip-types'
+    /*
+    ['transform-es2015-modules-umd', {
+      'globals': {
+        'jquery': 'jQuery'
+      }
+      //exactGlobals: true
+    }]
+    */
+    //'transform-es2015-modules-umd'
   ]
 }
