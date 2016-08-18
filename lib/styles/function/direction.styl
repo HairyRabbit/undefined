@@ -9,12 +9,32 @@
 ////
 
 
+
+///
+// isAll
+//
+// Test if direction is All.
+//
+// @param {direction} $dir
+// @return {boolean}
+///
 isAll($dir)
   $dir == a
 
-  
-exceptDefaultSelector($se, $dir)
-  if isAll($dir)
-    s('%s', s($se))
-  else
-    s('%s-%s', s($se), s($dir))
+
+///
+// exceptDefaultSelector
+//
+// Used for make selector. If $dir is the default value, return itself, otherwise return name with direction.
+//
+// @param {string} $se
+// @param {direction} $dir
+// @return {string}
+///
+exceptDefaultSelector($se, $dir = a)
+  $se1 = s($se)
+  $dir1 = s($dir)
+
+  isAll($dir)
+    ? '%s' % ($se1)
+    : '%s-%s' % ($se1 $dir1)

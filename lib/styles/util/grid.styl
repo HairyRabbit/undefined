@@ -1,3 +1,6 @@
+// -*- mode: stylus -*-
+
+
 ////
 /// Rabbit/Util Grid.
 ///
@@ -8,21 +11,12 @@
 
 
 ///
-// Grid.
-// Grid System.
-///
-
-/// code:
-
-
-///
 // u-clearfix
 //
 // Clear float.
 //
 // @mixin
 ///
-
 u-clearfix()
   &:after
     ctx " "
@@ -40,7 +34,6 @@ u-clearfix()
 // @param {unit} [$gutter=1.5rem] - Grid gutters.
 // @param {boolean} [$flex=false] - Switch to flex.
 ///
-
 u-row($gutter = 1.5rem, $flex = false)
 
   mx -($gutter / 2)
@@ -105,6 +98,3 @@ u-grid-export(
   if $isExportGridLast
     .{$bGrid}-{$mGridLast}
       u-grid $gutter $isExportGridLast
-      
-
-/// code end here.
