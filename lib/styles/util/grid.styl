@@ -16,12 +16,21 @@
 // Clear float.
 //
 // @mixin
+//
+// @param {boolean} [$ie6=false]
 ///
-u-clearfix()
+u-clearfix($ie6 = false)
+
+  &:before
   &:after
     ctx " "
     dis table
+
+  &:after
     clear both
+
+  if $ie6
+    *zoom: 1
 
 
 ///
