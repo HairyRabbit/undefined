@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "stylus": {
+    "define": {
+      "key": "rabbit"
+    }
+  },
+  "styles": {
+    "util": {
+      "grid": {
+        "isFlex": false,
+        "isExportLast": true
+      }
+    }
+  }
+}

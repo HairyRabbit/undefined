@@ -10,6 +10,20 @@
 
 
 
+
+///
+// _u-clearfix
+//
+// Clearfix required.
+//
+// @mixin
+// @private
+///
+_u-clearfix()
+  ctx " "
+  dis tb
+
+
 ///
 // u-clearfix
 //
@@ -17,17 +31,18 @@
 //
 // @mixin
 //
+// @param {boolean} [$ie8=false]
 // @param {boolean} [$ie6=false]
 ///
-u-clearfix($ie6 = false)
-
-  &:before
-  &:after
-    ctx " "
-    dis table
+u-clearfix($ie8 = false, $ie6 = false)
 
   &:after
+    _u-clearfix
     clear both
+
+  if $ie8
+    &:before
+      _u-clearfix
 
   if $ie6
     *zoom: 1
