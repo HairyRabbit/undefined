@@ -1,15 +1,13 @@
 {
-  "root": true,
-  "stylus": {
-    "define": {
-      "key": "rabbit"
-    }
-  },
   "styles": {
+    "isFlex": false,
+    "isIE6": false,
+    "isIE8": false,
     "util": {
       "grid": {
         "isFlex": false,
-        "isExportLast": true
+        "isExportLast": true,
+        "gutter": "2rem"
       }
     }
   }

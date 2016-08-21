@@ -21,7 +21,7 @@ foo()
 
 foo()
 
-///<
+///>
 ```
 
 这样`foo()`只在`environment === "development"`时输出，其他情况下会被替换成普通多行注释：
@@ -31,7 +31,12 @@ foo()
  
 foo()
 
- */
+*/
 ```
 
-如上所示，`environment`对象会在初始化 render 时传入。没找到`environment`时默认为`false`。
+如上所示，`environment`对象会在初始化 render 时传入。
+
+
+#### rabbit stylus define 路径匹配规则
+
+查找时，先在`config.styles.global`中查找对应的 key，如果没有找到，会在`config`下进行查找，此时没找到对象时，结果为`false`。
