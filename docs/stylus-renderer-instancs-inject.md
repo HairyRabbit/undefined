@@ -24,7 +24,8 @@ new Renderer(str, opts).render(fn)
 
 @TODO stylus-loader gulp-stylus
 
-#### renderer instance
+
+#### Renderer instance
 
 Renderer 实例是由三部分组成的，`options`，`str`和`events`，其中`str`是文件源码内容，`events`是一个`EventEmitter`实例。
 
@@ -38,4 +39,7 @@ options内容比较多，其中有几个重要对象：
 * `options.paths` stylus 的 path 变量，模块会在这里搜索
 
 首先，可以用`renderer.get`与`renderer.set`方法来设置和读取options中的值；`renderer.include`用来把路径添加到`paths`中；而`renderer.use`用于添加插件列表；`renderer.define`方法可以设置全局变量，也能设置自定义函数，如果传入的是值，会添加到`renderer.globals`中，函数会添加到`renderer.functions`里面。
+
+
+#### Rabbit custom injection
 

@@ -58,7 +58,7 @@
     "exports-loader": "^0.6.3",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
-    "flow-bin-win": "^0.19.2",
+    "flow-bin": "^0.31.1",
     "forever-monitor": "^1.7.0",
     "gift": "^0.9.0",
     "gulp": "github:gulpjs/gulp#4.0",
@@ -103,11 +103,10 @@
     "start": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/dev-builder.js --cwd=./ -S",
     "components": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/components-builder.js --cwd=./",
     "prod": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/prod-builder.js --cwd=./",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest",
+    "flow": "./node_modules/.bin/flow"
   },
-  "jest": {
-
-  },
+  "jest": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuffiy/atlantis.git"

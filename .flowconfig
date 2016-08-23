@@ -1,14 +1,18 @@
 [ignore]
+.*/node_modules/angular2/.*
+.*/node_modules/fbjs/.*
 .*/node_modules/.*
 .*/.test/.*
 .*/.happypack/.*
 .*/.tmp/.*
 .*/.bin/.*
 .*/typings/.*
+.*/src/.*
+./*.json
 
 [include]
-src/icon-pool/*.js
 
 [libs]
+./interfaces/
 
 [options]
