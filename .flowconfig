@@ -8,9 +8,15 @@
 .*/.bin/.*
 .*/typings/.*
 .*/src/.*
-./*.json
+.*/*.json
+.*/node_modules/flow-static-land/package.json
+.*/lib/builder/.*
+.*/lib/dll/.*
+.*/lib/scaffold/.*
+.*/elm-stuff/.*
 
 [include]
+.*/node_modules/flow-static-land/
 
 [libs]
 ./interfaces/
