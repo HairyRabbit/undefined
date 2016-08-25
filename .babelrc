@@ -1,6 +1,6 @@
 {
   presets: [
-    'es2015',
+    ['es2015'],
     //'es2015-webpack',
     'react',
     'stage-0',
@@ -9,7 +9,7 @@
     'node_modules/nunjucks/*',
     'node_modules/core-js/*',
   ],
-  sourceMaps: 'inline',
+  //sourceMaps: 'inline',
   plugins: [
     'transform-flow-strip-types'
     /*

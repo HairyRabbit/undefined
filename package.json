@@ -105,7 +105,8 @@
     "components": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/components-builder.js --cwd=./",
     "prod": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/prod-builder.js --cwd=./",
     "test": "./node_modules/.bin/jest",
-    "flow": "./node_modules/.bin/flow"
+    "flow": "./node_modules/.bin/flow",
+    "build-builder": "node -r babel-register lib/BuildBuilder.js"
   },
   "jest": {},
   "repository": {
