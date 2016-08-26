@@ -1,8 +1,7 @@
 {
   presets: [
-    ['es2015'],
-    //'es2015-webpack',
-    'react',
+    [ 'latest' ],
+    [ 'react' ],
     'stage-0',
   ],
   ignore: [
@@ -11,15 +10,15 @@
   ],
   //sourceMaps: 'inline',
   plugins: [
-    'transform-flow-strip-types'
-    /*
+    'transform-flow-strip-types',
+    ///*
     ['transform-es2015-modules-umd', {
       'globals': {
         'jquery': 'jQuery'
       }
       //exactGlobals: true
     }]
-    */
+    //*/
     //'transform-es2015-modules-umd'
   ]
 }
