@@ -109,7 +109,8 @@
     "prod": "./node_modules/.bin/gulp --require=babel-register --gulpfile=lib/builder/prod-builder.js --cwd=./",
     "test": "./node_modules/.bin/jest",
     "flow": "./node_modules/.bin/flow",
-    "build-builder": "node -r babel-register lib/BuildBuilder.js"
+      "build-builder": "node -r babel-register lib/BuildBuilder.js",
+      "html": "node -r babel-register lib/ReactFileWrapper.js"
   },
   "jest": {},
   "repository": {
