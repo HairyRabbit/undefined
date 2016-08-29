@@ -1,5 +1,6 @@
 {
   presets: [
+    //[ 'latest', { es2015: { modules: false } } ],
     [ 'latest' ],
     [ 'react' ],
     'stage-0',
