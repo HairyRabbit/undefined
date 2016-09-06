@@ -57,6 +57,39 @@ Parallel: make(
 callback(compilation)
 
 
+### InputFileSystem && OutputFileSystem
+
+
+### Records
+
+Store/Load compiler state from/to a json file. This will result in persistent ids of modules and chunks.
+
+This is required, when using Hot Code Replacement between multiple calls to the compiler.
+
+```json
+{
+  "modules": {
+    "byIdentifier": {
+      "node_modules\\babel-loader\\index.js?{\"presets\":[[\"es2015\",{\"modules\":false}]]}!lib\\WebpackSimple1.js": 0,
+      "node_modules\\babel-loader\\index.js?{\"presets\":[[\"es2015\",{\"modules\":false}]]}!lib\\WebpackSimple.js": 1
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "chunks": {
+    "byName": {
+      "main": 0
+    },
+    "byBlocks": {},
+    "usedIds": {
+      "0": 0
+    }
+  }
+}
+```
+
 
 ### Compilation Module
 
@@ -71,3 +104,22 @@ rebuildModule
 finish
 
 applyModuleIds
+
+
+### DependenciesBlock
+
+DependenciesBlockVariable
+
+addBlock
+addVariable
+addDependency
+updateHash
+disconnect
+unseal
+hasDependencies
+sortItems
+
+
+### Module
+
+

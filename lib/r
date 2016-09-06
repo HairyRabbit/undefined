@@ -1,0 +1,21 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "node_modules\\babel-loader\\index.js?{\"presets\":[[\"es2015\",{\"modules\":false}]]}!lib\\WebpackSimple1.js": 0,
+      "node_modules\\babel-loader\\index.js?{\"presets\":[[\"es2015\",{\"modules\":false}]]}!lib\\WebpackSimple.js": 1
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "chunks": {
+    "byName": {
+      "main": 0
+    },
+    "byBlocks": {},
+    "usedIds": {
+      "0": 0
+    }
+  }
+}
