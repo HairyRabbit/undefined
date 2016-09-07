@@ -123,3 +123,112 @@ sortItems
 ### Module
 
 
+### NormalModule
+
+request
+userRequest
+rawRequest
+loaders
+resource
+parser
+
+NormalModule.doBuild() 开始编译
+NormalModuleFactory
+
+### NormalModuleFactory
+
+构造
+
+1. context <- options.context || ''
+根目录，绝对路径，用来解析entry, output.pathinfo，默认 process.cwd()
+
+2. resolver <- resolvers
+```js
+  this.resolvers = {
+		normal: new Resolver(null),
+		loader: new Resolver(null),
+		context: new Resolver(null)
+	};
+```
+
+parser <- new Parser()
+options.loaders
+options.preLoaders
+options.postLoaders
+
+loadersList { list: [{ test: '\.js', loaders: [] }] }
+
+#### NormalModuleFactory.create()
+
+参数
+
+{
+  context: 'F:\\atlantis\\lib',
+  dependencies: [
+    CommonJsRequireDependency {
+      module: null,
+      request: './WebpackSimple1.js',
+      userRequest: './WebpackSimple1.js',
+      range: [110, 131]
+      loc: { 
+        start: { line: 7, column: 21 },
+        end: { line: 7, column: 51 }
+      },
+      optional: false
+    }
+  ]
+}
+
+插件
+
+factory -> resolver
+
+
+### Compiler
+
+
+Compiler.createNormalModuleFactory() 创建NormalModule
+
+
+
+
+### loader-runner
+
+EMFILE
+
+``` js
+import { runLoaders } from "loader-runner";
+
+runLoaders({
+	resource: "/abs/path/to/file.txt?query",
+	// String: Absolute path to the resource (optionally including query string)
+
+	loaders: ["/abs/path/to/loader.js?query"],
+	// String[]: Absolute paths to the loaders (optionally including query string)
+
+	context: { minimize: true },
+	// Additional loader context which is used as base context
+
+	readResource: fs.readFile.bind(fs)
+	// A function to read the resource
+	// Must have signature function(path, function(err, buffer))
+
+}, function(err, result) {
+	// err: Error?
+
+	// result.result: Buffer | String
+	// The result
+
+	// result.resourceBuffer: Buffer
+	// The raw resource as Buffer (useful for SourceMaps)
+
+	// result.cacheable: Bool
+	// Is the result cacheable or do it require reexecution?
+
+	// result.fileDependencies: String[]
+	// An array of paths (files) on which the result depends on
+
+	// result.contextDependencies: String[]
+	// An array of paths (directories) on which the result depends on
+})
+```
