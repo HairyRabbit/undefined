@@ -1,5 +1,12 @@
 # 集合内函数调用 流程控制 模式
 
+## nodejs EventEmitter 分析
+
+EventHandles 用于储存事件句柄。
+
+
+
+## Tapable
 
 Tapable 是 webpack 构建系统的核心。webpack 具备高扩展性的原因就是源于 Tapable 这个库。他本身很简单，源代码只有200来行，那么 Tapable 为什么会有如此强大的作用呢？不如我们首先来看看这个库的使用方法。
 
