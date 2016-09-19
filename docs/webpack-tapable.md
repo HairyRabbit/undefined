@@ -1,8 +1,18 @@
 # 集合内函数调用 流程控制 模式
 
-## nodejs EventEmitter 分析
+* 全部函数顺序执行
 
-EventHandles 用于储存事件句柄。
+## 案例分析 [nodejs EventEmitter](https://github.com/nodejs/node/blob/master/lib/events.js)
+
+事件管理器 EventEmitter 的核心函数有两个，向事件集合中添加函数的`event.on()`以及用于触发的函数`event.emit()`。
+
+首先要了解的是 EventHandles。EventHandles 是一个 map 集合，用于储存事件句柄。addListener，on，once，removeListener，removeAllListener 是几个操作 EventHandles 的函数。
+
+on 函数可以向 EventHandles 里添加一条数据，他需要一个事件名称`type`和一个需要调用的函数`listener`。
+
+
+
+
 
 
 
