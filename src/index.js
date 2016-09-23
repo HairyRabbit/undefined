@@ -132,10 +132,6 @@ function computLastDateInMonth(target, sum, curr) {
   return target + computMsAsDay(sum - curr)
 }
 
-function prepend() {
-
-}
-
 function constCurrentMonthDates(count) {
   return new Array(count)
 }
@@ -219,4 +215,15 @@ function main(start) {
 main(1475205920779) //Date.now()
 
 
-import 'runtime/function/partial'
+import * as Stamp from 'runtime/date/stamp'
+import { range } from 'runtime/list/range'
+import { prepend } from 'runtime/list/capped-collection'
+import { calendar } from 'runtime/date/calendar'
+
+console.log(
+  //Stamp.toDate(Stamp.firstDayTimestampOfMonth(Stamp.now())),
+  //prepend(range(42), -3, -2, -1),
+  //range(-1, -5, -1),
+  calendar(Stamp.now()).map(Stamp.toDate),
+  //Stamp.toDate(Stamp.offsetDays(1474626782367, 0))
+)
