@@ -219,11 +219,19 @@ import * as Stamp from 'runtime/date/stamp'
 import { range } from 'runtime/list/range'
 import { prepend } from 'runtime/list/capped-collection'
 import { calendar } from 'runtime/date/calendar'
+import { consoleView } from 'runtime/view/calendar'
+import { repeat } from 'runtime/string/repeat'
+import { fill } from 'runtime/string/fill'
+import { pad } from 'runtime/string/pad/pad'
 
 console.log(
   //Stamp.toDate(Stamp.firstDayTimestampOfMonth(Stamp.now())),
   //prepend(range(42), -3, -2, -1),
   //range(-1, -5, -1),
-  calendar(Stamp.now()).map(Stamp.toDate),
-  //Stamp.toDate(Stamp.offsetDays(1474626782367, 0))
+  //calendar(Stamp.now()).map(Stamp.toDate),
+  //Stamp.toDate(Stamp.offsetDays(1474626782367, 0)),
+  consoleView(calendar(Stamp.now())),
+  //repeat(5, ' '),
+  fill(5, ' '),
+  pad(10, 'hhh')
 )
