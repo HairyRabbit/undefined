@@ -223,6 +223,7 @@ import { consoleView } from 'runtime/view/calendar'
 import { repeat } from 'runtime/string/repeat'
 import { fill } from 'runtime/string/fill'
 import { pad } from 'runtime/string/pad/pad'
+import { trim } from 'runtime/string/whitespace/trim'
 
 console.log(
   //Stamp.toDate(Stamp.firstDayTimestampOfMonth(Stamp.now())),
@@ -230,8 +231,9 @@ console.log(
   //range(-1, -5, -1),
   //calendar(Stamp.now()).map(Stamp.toDate),
   //Stamp.toDate(Stamp.offsetDays(1474626782367, 0)),
-  consoleView(calendar(Stamp.now())),
+  //consoleView(calendar(Stamp.now())),
   //repeat(5, ' '),
-  fill(5, ' '),
-  pad(10, 'hhh')
+  //fill(5, ' '),
+  //pad(10, 'hhh')
+  trim('   123  3 5 ')
 )
