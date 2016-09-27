@@ -1,9 +1,26 @@
 * String
 
+** constustor
+
+| file   | status | note |
+|--------+--------+------|
+| repeat | ****   |      |
+| fill   | ****   |      |
+
+
+
 ** whitespace
 
-| file      | status |
-| pad.js    |      2 |
-| trim.js   |      2 |
-| indent.js |      2 |
+| file   | status | note  |
+|--------+--------+-------|
+| pad    | ****   |       |
+| trim   | *****  | alias |
+| indent | ***    |       |
 
+** modifier
+
+
+| file   | status | note |
+|--------+--------+------|
+| concat |        |      |
+| chop   |        |      |
