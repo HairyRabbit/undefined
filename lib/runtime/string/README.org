@@ -1,0 +1,9 @@
+* String
+
+** whitespace
+
+| file      | status |
+| pad.js    |      2 |
+| trim.js   |      2 |
+| indent.js |      2 |
+
