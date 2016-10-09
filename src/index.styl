@@ -7,7 +7,7 @@ $pc = #c6afe9
 @require "styles/theme"
 
 @require "u:grid[isFlex: false, isExportLast: false]!"
-//@require "u:position[]"
+@require "u:position[]"
 
 
 
@@ -137,15 +137,27 @@ theme-dark()
   dis flex
   align-items center
   justify center
+  bg #fbfbfb
 
 .blog-avatar
   dis ib
   //bd 5px solid rgba($pc, .28)
   bdrz 50%
   cur ptr
-  shadow 0 0 10px rgba($pc, .72)
+  shadow 0 0 10px rgba(#aaa, .72)
 
   img
-    width 8rem
+    width 7rem
     dis bl
     bdrz 50%
+
+.loader-circle
+  size 1rem
+  pos rela
+
+.loader-circle-cursor
+  dis ib
+  u-fill a
+  size 1rem
+  bg #aaa
+  bdrz 50%
